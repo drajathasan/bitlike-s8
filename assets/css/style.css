@@ -1,0 +1,93 @@
+@font-face {
+    font-family: Quicksand;
+    src: url('../fonts/Quicksand/Quicksand-Regular.ttf');
+}
+
+* {
+    font: 11.5pt/1.3 'Quicksand', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+}
+
+#dataList > tbody > tr > td > a {
+    font-weight: 900;
+}
+
+#dataList > tbody > tr.dataListHeader > td {
+    font-weight: 900;
+}
+
+/* Scroll */
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    width: 5px;
+    height: 4px;
+}
+
+.left-sidebar {
+    background-color: #0747a6;
+    width: 20%;
+}
+
+.right-content {
+    width: 80%;
+    margin-left: 20%;
+}
+
+.menu-actve {
+    background-color: #06367e;
+}
+
+.menuHideContent {
+    width: 25%;
+}
+
+.menuHideContentBlur {
+    width: 100%;
+}
+
+.focus\:bluedark:focus  {
+    background-color: #06367e;
+}
+
+.slideOutLeft {
+    animation: show2Hide 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+.slideInLeft {
+    animation: hide2Show 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+/* Animation */
+@keyframes show2Hide {
+    0%   {width: 25%;}
+    100% {width: 0%; display: none}
+}  
+
+@keyframes hide2Show {
+    0%   {width: 0%;}
+    100% {width: 25%; display: none}
+}
