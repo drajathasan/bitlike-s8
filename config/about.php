@@ -64,6 +64,7 @@ require __DIR__.'/../BitLike.php';
         <ul class="text-base">
             <li><h1 class="text-lg font-bold">Informasi</h1></li>
             <li><span class="w-14 inline-block mt-2">Versi</span> : &nbsp; <b><?= BIT_VERSION ?></b></li>
+            <li><span class="w-14 inline-block mt-2">Lisensi</span> : &nbsp; <b><?= BIT_LICENSE ?></b></li>
             <li><h1 class="text-lg font-bold mt-2 inline-block">Fitur</h1></li>
             <li>
                 <ol class="list-decimal mt-2 ml-8">
@@ -73,9 +74,9 @@ require __DIR__.'/../BitLike.php';
                     <li class="p-2">Easy Menu Access</li>
                 </ol>
             </li>
-            <li><h1 class="text-lg font-bold">Deskripsi</h1></li>
+            <li><h1 class="text-lg font-bold mt-2">Deskripsi</h1></li>
             <li>
-                <p>BitLike merupakan template admin untuk SLiMS >= 9.3.1 yang terinspirasi dari template dashboard dari layanan Hosting Git yaitu <b>BitBucket</b> </p>
+                <p class="leading-8 text-justify pr-5">BitLike merupakan template admin untuk SLiMS >= 9.3.1 yang terinspirasi dari template dashboard layanan Hosting Git yaitu <b>BitBucket</b>. Apa yang anda lihat bukanlah hasil <b class="italic"><i>copy-paste</i></b> template dengan mesin kloning seperti httrack melain kan rakitan dan dibuat dengan bantuan library CSS dari bootstrap dan tailwind + css bawaan SLiMS 9 dll, jadi ini tidak murni saya buat dari nol melainkan rakitan. Saya berharap anda dapat menikmati template ini dengan Bebas (Dikustom sesuai keinginan) dengan <a href="javascript:void(0)" class="notAJAX" title="Klik untuk info lebih lanjut" onclick="alert('Jangan hapus nama saya ketika anda mengcustom template ini atau mengkomersilkan nya (Kebutuhan Jasa) : (.')"><b>etika yang berlaku :).</b></a></p>
             </li>
         </ul>
     </div>

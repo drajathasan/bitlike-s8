@@ -10,7 +10,10 @@
 (!defined('INDEX_AUTH')) ?? die('No direct include!');
 
 // set Version
-define('BIT_VERSION', '1.2.0');
+define('BIT_VERSION', '1.3.1');
+
+// set license
+define('BIT_LICENSE', 'GPLv3');
 
 // set Author
 define('BIT_AUTHOR', 'Drajat Hasan');
