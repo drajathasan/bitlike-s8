@@ -13,10 +13,9 @@ if (isset($_GET['generateMenu']) && !empty($_GET['generateMenu']))
         
         case 'Search-Menu':
             // Search menu
-            echo '<input onkeyup="searchMenu(event,this)" type="text" class="form-control" placeholder="Masukan kata kunci" autofocus/>';
-            echo '<ul id="lastSearchMenu" class="my-3">
-                  </ul>';
-            echo '<ul id="searchResult" class="my-3 text-gray-800"></ul>';
+
+            header('Content-type: application/json');
+            echo json_encode(generateSearchJs());
             break;
         case 'Shortcut':
             break;
@@ -51,5 +50,15 @@ if (isset($_GET['chart']))
 {   
     header('Content-type: application/json');
     echo json_encode(chart($_GET['chart']));
+    exit;
+}
+
+// set default menu
+if (isset($_GET['defaultSubmenu']))
+{
+    include SB.'admin/default/submenu.php';
+
+    header('Content-type: application/json');
+    echo json_encode(array_values($menu), JSON_PRETTY_PRINT);
     exit;
 }

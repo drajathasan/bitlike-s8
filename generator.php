@@ -60,6 +60,21 @@ function generateModuleJs($customClass = 'text-white')
     return $menu;
 }
 
+function generateSearchJs()
+{
+    $menus = [];
+    foreach ($_SESSION['priv'] as $moduleName => $options) {
+        foreach (generateSubMenu($moduleName, $module, false) as $menu => $subMenu) {
+            if ($subMenu[0] !== 'Header')
+            {
+                $menus[] = array_merge($subMenu, [$moduleName]);
+            }
+        }
+    }
+
+    return $menus;
+}
+
 function generateSubMenu($module, $objModule, $withHtml = true)
 {
     global $dbs;
