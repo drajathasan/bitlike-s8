@@ -125,10 +125,10 @@ function openDefaultSubmenu()
         .then(result => localStorage.setItem('defaultSubmenu', result));
     }
 
+    
     setTimeout(() => {
         let defaultSubmenu = JSON.parse(localStorage.getItem('defaultSubmenu'));
         let menu = '';
-
         defaultSubmenu.forEach((item,index) => {
             if (index === 0)
             {
@@ -153,9 +153,8 @@ function openDefaultSubmenu()
                 menu += `</li>`;
             }
         })
+        setHtml('.submenu', menu);
     }, 200)
-
-    setHtml('.submenu', menu);
 }
 
 function openBitLikeSubmenu()
@@ -213,7 +212,8 @@ const parseModuleList = (type = '', inputResult = '') =>
     }
 
     let result = JSON.parse(localStorage.getItem(type));
-    let menu = ``;
+    let menu = '';
+
     if (type === 'General-Menu') 
     {
         result.forEach((options, index) => {
@@ -248,6 +248,7 @@ const parseModuleList = (type = '', inputResult = '') =>
         menu += `</ul>`
         menu += `<ul id="searchResult" class="my-3 text-gray-800"></ul>`
     }
+
     return menu;
 }
 
