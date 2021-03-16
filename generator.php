@@ -1,4 +1,11 @@
 <?php
+/**
+ * @author Drajat Hasan
+ * @email drajathasan20@gmail.com
+ * @create date 2021-03-16 10:55:41
+ * @modify date 2021-03-16 10:56:00
+ * @desc [description]
+ */
 
 (!defined('INDEX_AUTH')) ?? die('No direct include!');
 
@@ -62,6 +69,7 @@ function generateModuleJs($customClass = 'text-white')
 
 function generateSearchJs()
 {
+    global $module;
     $menus = [];
     foreach ($_SESSION['priv'] as $moduleName => $options) {
         foreach (generateSubMenu($moduleName, $module, false) as $menu => $subMenu) {

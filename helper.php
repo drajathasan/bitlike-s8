@@ -1,4 +1,11 @@
 <?php
+/**
+ * @author Drajat Hasan
+ * @email drajathasan20@gmail.com
+ * @create date 2021-03-16 10:57:18
+ * @modify date 2021-03-16 10:57:18
+ * @desc [description]
+ */
 
 (!defined('INDEX_AUTH')) ?? die('No direct include!');
 
@@ -97,6 +104,7 @@ function defaultJS($arrayAdditionalJS = [])
         JWB."scanner.js",
         SWB."js/bootstrap.min.js",
         SWB."js/popper.min.js",
+        AWB."admin_template/bitlike/assets/js/vanilla-picker.min.js",
         $sysconf['admin_template']['dir']."/default/js/smooth-scrollbar.js",
         $sysconf['admin_template']['dir']."/default/js/overscroll.js"
     ];

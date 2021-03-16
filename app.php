@@ -1,4 +1,11 @@
 <?php
+/**
+ * @author Drajat Hasan
+ * @email drajathasan20@gmail.com
+ * @create date 2021-03-16 10:55:41
+ * @modify date 2021-03-16 10:55:41
+ * @desc [description]
+ */
 
 (!defined('INDEX_AUTH')) ?? die('No direct include!');
 
@@ -59,6 +66,16 @@ if (isset($_GET['defaultSubmenu']))
     include SB.'admin/default/submenu.php';
 
     header('Content-type: application/json');
-    echo json_encode(array_values($menu), JSON_PRETTY_PRINT);
+    echo json_encode(array_values($menu));
+    exit;
+}
+
+// set BitLike submenu
+if (isset($_GET['bitlikeMenu']))
+{
+    include SB.'admin/admin_template/bitlike/config/submenu.php';
+
+    header('Content-type: application/json');
+    echo json_encode(array_values($menu));
     exit;
 }

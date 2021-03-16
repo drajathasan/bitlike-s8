@@ -56,6 +56,21 @@ Email : <?= BIT_AUTHOR_EMAIL ?>
 
         <!-- Default SLiMS JS -->
         <?= defaultJS() ?>
+
+        <!-- Custom left sidbar color -->
+        <?php
+        if (file_exists(__DIR__.'/config/color-'.$_SESSION['uid'].'.json'))
+        {
+            $data = json_decode(file_get_contents(__DIR__.'/config/color-'.$_SESSION['uid'].'.json'), TRUE);
+
+            if (!is_null($data) && isset($data['hex']) && !empty($data['hex']))
+            {
+                ?>
+                <style id="customColor">.left-sidebar {background-color: <?= $data['hex'] ?> !important} </style>
+                <?php
+            }
+        }
+        ?>
     </head>
     <body>
         <section class="flex">
@@ -86,6 +101,11 @@ Email : <?= BIT_AUTHOR_EMAIL ?>
                         <!-- Shorcut -->
                         <svg onclick="openDefaultSubmenu()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="fixed ml-3 text-white mx-auto block mt-32 hover:bg-blue-500 rounded-full cursor-pointer" viewBox="0 0 16 16" style="margin-left: 10px !important">
                             <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        </svg>
+
+                        <!-- Template Configuration -->
+                        <svg onclick="openBitLikeSubmenu()" title="Pengaturan BitLike" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-10 w-10 p-2 rounded-full text-white fixed bottom-0 ml-2 mb-40 hover:bg-blue-500 cursor-pointer" viewBox="0 0 16 16">
+                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
                         </svg>
 
                         <!-- Global Menu -->

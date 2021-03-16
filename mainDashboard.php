@@ -1,4 +1,12 @@
 <?php
+/**
+ * @author Drajat Hasan
+ * @email drajathasan20@gmail.com
+ * @create date 2021-03-16 10:55:41
+ * @modify date 2021-03-16 10:55:41
+ * @desc [description]
+ */
+
 // set index auth
 if (!defined('INDEX_AUTH'))
 {
@@ -31,8 +39,8 @@ if (!defined('INDEX_AUTH'))
         endforeach; 
         ?>
     </div>
-    <div>
-        <div class="flex-initial c1 w-8/12 text-gray-700 text-center px-4 py-2 m-2" id="chart-c1">
+    <div class="flex">
+        <div class="flex-initial c1 w-7/12 text-gray-700 text-center px-4 py-2 m-2" id="chart-c1">
         
         </div>
         <div class="flex-initial c2 w-4/12 text-gray-700 text-center px-4 py-2 m-2" id="chart-c2">
