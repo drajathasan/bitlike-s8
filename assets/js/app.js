@@ -125,33 +125,35 @@ function openDefaultSubmenu()
         .then(result => localStorage.setItem('defaultSubmenu', result));
     }
 
-    let defaultSubmenu = JSON.parse(localStorage.getItem('defaultSubmenu'));
-    let menu = '';
+    setTimeout(() => {
+        let defaultSubmenu = JSON.parse(localStorage.getItem('defaultSubmenu'));
+        let menu = '';
 
-    defaultSubmenu.forEach((item,index) => {
-        if (index === 0)
-        {
-            menu += `<li class="block">`;
-            menu += `<span class="text-lg font-bold p-2 w-48 block text-white no-underline" style="text-decoration: none !important">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hash inline-block" viewBox="0 0 16 16">
-            <path d="M8.39 12.648a1.32 1.32 0 0 0-.015.18c0 .305.21.508.5.508.266 0 .492-.172.555-.477l.554-2.703h1.204c.421 0 .617-.234.617-.547 0-.312-.188-.53-.617-.53h-.985l.516-2.524h1.265c.43 0 .618-.227.618-.547 0-.313-.188-.524-.618-.524h-1.046l.476-2.304a1.06 1.06 0 0 0 .016-.164.51.51 0 0 0-.516-.516.54.54 0 0 0-.539.43l-.523 2.554H7.617l.477-2.304c.008-.04.015-.118.015-.164a.512.512 0 0 0-.523-.516.539.539 0 0 0-.531.43L6.53 5.484H5.414c-.43 0-.617.22-.617.532 0 .312.187.539.617.539h.906l-.515 2.523H4.609c-.421 0-.609.219-.609.531 0 .313.188.547.61.547h.976l-.516 2.492c-.008.04-.015.125-.015.18 0 .305.21.508.5.508.265 0 .492-.172.554-.477l.555-2.703h2.242l-.515 2.492zm-1-6.109h2.266l-.515 2.563H6.859l.532-2.563z"/>
-            </svg>&nbsp;
-            ${item[1]}            
-            </span>`;
-            menu += `</li>`;
-        }
-        else
-        {
-            menu += `<li class="block text-white">`;
-            menu += `<span onclick="specialSimbioClick('${item[1]}')" class="text-sm font-semibold p-2 hover:bg-blue-500 w-48 block cursor-pointer no-underline text-white" title="${item[2]}" style="text-decoration: none !important">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="fill-current '.$customClass.' inline-block ml-2" viewBox="0 0 16 16">
-            <path d="M.54 3.87L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z"/>
-            </svg>&nbsp;
-            ${item[0]}            
-            </span>`;
-            menu += `</li>`;
-        }
-    })
+        defaultSubmenu.forEach((item,index) => {
+            if (index === 0)
+            {
+                menu += `<li class="block">`;
+                menu += `<span class="text-lg font-bold p-2 w-48 block text-white no-underline" style="text-decoration: none !important">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hash inline-block" viewBox="0 0 16 16">
+                <path d="M8.39 12.648a1.32 1.32 0 0 0-.015.18c0 .305.21.508.5.508.266 0 .492-.172.555-.477l.554-2.703h1.204c.421 0 .617-.234.617-.547 0-.312-.188-.53-.617-.53h-.985l.516-2.524h1.265c.43 0 .618-.227.618-.547 0-.313-.188-.524-.618-.524h-1.046l.476-2.304a1.06 1.06 0 0 0 .016-.164.51.51 0 0 0-.516-.516.54.54 0 0 0-.539.43l-.523 2.554H7.617l.477-2.304c.008-.04.015-.118.015-.164a.512.512 0 0 0-.523-.516.539.539 0 0 0-.531.43L6.53 5.484H5.414c-.43 0-.617.22-.617.532 0 .312.187.539.617.539h.906l-.515 2.523H4.609c-.421 0-.609.219-.609.531 0 .313.188.547.61.547h.976l-.516 2.492c-.008.04-.015.125-.015.18 0 .305.21.508.5.508.265 0 .492-.172.554-.477l.555-2.703h2.242l-.515 2.492zm-1-6.109h2.266l-.515 2.563H6.859l.532-2.563z"/>
+                </svg>&nbsp;
+                ${item[1]}            
+                </span>`;
+                menu += `</li>`;
+            }
+            else
+            {
+                menu += `<li class="block text-white">`;
+                menu += `<span onclick="specialSimbioClick('${item[1]}')" class="text-sm font-semibold p-2 hover:bg-blue-500 w-48 block cursor-pointer no-underline text-white" title="${item[2]}" style="text-decoration: none !important">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="fill-current '.$customClass.' inline-block ml-2" viewBox="0 0 16 16">
+                <path d="M.54 3.87L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z"/>
+                </svg>&nbsp;
+                ${item[0]}            
+                </span>`;
+                menu += `</li>`;
+            }
+        })
+    }, 200)
 
     setHtml('.submenu', menu);
 }
