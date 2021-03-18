@@ -25,7 +25,7 @@ $('.count').each(function () {
         }); 
 
         setTimeout(() => {
-            console.info('Tunggu 3 detik, biar gak lama');
+            //console.info('Tunggu 3 detik, biar gak lama');
         }, 3000);
     })
 });

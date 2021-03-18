@@ -72,7 +72,7 @@ Email : <?= BIT_AUTHOR_EMAIL ?>
         }
         ?>
     </head>
-    <body>
+    <body class="bg-gray-100">
         <section class="flex">
             <!-- Left Sidebar -->
             <div class="h-screen left-sidebar fixed">
@@ -127,7 +127,7 @@ Email : <?= BIT_AUTHOR_EMAIL ?>
                     <!-- Big Menu -->
                     <div class="w-4/5 h-screen px-2 mt-6">
                         <!-- Label -->
-                        <h1 class="text-white font-bold text-2xl "><?= $sysconf['library_name'] === 'Senayan' ? 'SLiMS' : $sysconf['library_name'] ?></h1>
+                        <h1 class="text-white font-bold <?= strlen($sysconf['library_name']) > 25 ? 'text-md' : 'text-2xl' ?>"><?= $sysconf['library_name'] === 'Senayan' ? 'SLiMS' : $sysconf['library_name'] ?></h1>
                         <!-- Menu -->
                         <ul class="text-white mt-6 pb-32 h-screen overflow-y-auto submenu">
                             <?php 

@@ -65,12 +65,21 @@ if (isset($_GET['deleteconf']))
     exit;
 }
 
+if (isset($_GET['clear']))
+{
+    echo '<script>localStorage.clear();</script>';
+    utility::jsToastr(__('System Configuration'), 'Bitlike Cache berhasil dihapus!', 'success'); 
+    exit;
+}
+
 $hex = '#0747a6';
 if (file_exists(__DIR__.'/color-'.$_SESSION['uid'].'.json'))
 {
     $json = json_decode(file_get_contents(__DIR__.'/color-'.$_SESSION['uid'].'.json'), TRUE);
     $hex = $json['hex'];
 }
+
+$configWrite = is_writable(__DIR__);
 
 ?>
 <div class="menuBox">
@@ -81,18 +90,27 @@ if (file_exists(__DIR__.'/color-'.$_SESSION['uid'].'.json'))
     <div class="infoBox">
       Ubah pengaturan.
     </div>
+    <?php if (!$configWrite): ?>
+    <div class="infoBox bg-red-500 text-white">
+      Folder <b>"<?= __DIR__ ?>"</b> tidak dapat ditulis!
+    </div>
+    <?php endif; ?>
   </div>
 </div>
+<?php if ($configWrite): ?>
 <div class="flex">
     <div class="w-full m-2 block">
         <form class="w-full" method="POST" action="<?= $_SERVER['PHP_SELF'] ?>" target="BitBlind">
-            <label class="inline-block">Pilih Warna</label>
+            <label class="inline-block w-32">Pilih Warna</label>
             <button class="ml-5 inline-block bg-blue-500 rounded-lg p-2 text-white" id="colorPicker">Buka Pemilih Warna</button>
             <br>
-            <label class="inline-block">Kode Warna</label>
+            <label class="inline-block w-32">Kode Warna</label>
             <div id="colorResult" class="ml-5 inline-block w-8 h-8 mt-2" style="background-color: <?= $hex ?>"></div>
             <label id="hexResult" class="inline-block"><?= $hex ?></label>
+            <br>
             <input type="hidden" name="hex" value="<?= $hex ?>"/>
+            <label class="inline-block w-32">Hapus Cache</label>
+            <a href="<?= $_SERVER['PHP_SELF']; ?>?clear=cache" target="BitBlind" class="notAJAX ml-5 inline-block bg-yellow-500 rounded-lg p-2 text-white" id="colorPicker">Hapus</a>
             <br>
             <button class="float-right mr-2 inline-block bg-green-500 rounded-lg p-2 text-white">Simpan</button>
             <a href="<?=$_SERVER['PHP_SELF']?>?deleteconf=true" target="BitBlind" class="float-right mr-2 inline-block bg-red-500 rounded-lg p-2 text-white">Reset</a>
@@ -120,3 +138,4 @@ if (file_exists(__DIR__.'/color-'.$_SESSION['uid'].'.json'))
 
     // onDone is similar to onChange, but only called when you click 'Ok'.
 </script>
+<?php endif; ?>
