@@ -87,7 +87,8 @@ function generateSubMenu($module, $objModule, $withHtml = true)
 {
     global $dbs;
     $module = basename($module);
-    $plugins = \SLiMS\Plugins::getInstance()->getMenus($module);
+    // $plugins = \SLiMS\Plugins::getInstance()->getMenus($module); // for S9
+    $plugins = []; // for S9
 
     if (isExists(SB.'admin/modules/' . $module))
     {

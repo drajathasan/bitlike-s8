@@ -95,7 +95,6 @@ function defaultJS($arrayAdditionalJS = [])
 
     $jsMap = [
         JWB."jquery.js",
-        AWB."admin_template/default/vendor/slimscroll/jquery.slimscroll.min.js",
         JWB."updater.js",
         JWB."gui.js?v=".date('this'),
         JWB."form.js",
@@ -108,11 +107,9 @@ function defaultJS($arrayAdditionalJS = [])
         JWB."jquery.imgareaselect/scripts/jquery.imgareaselect.pack.js",
         JWB."webcam.js",
         JWB."scanner.js",
-        SWB."js/bootstrap.min.js",
-        SWB."js/popper.min.js",
+        themeLink("assets/js/bootstrap.min.js"),
+        themeLink("assets/js/popper.min.js"),
         themeLink("assets/js/vanilla-picker.min.js"),
-        $sysconf['admin_template']['dir']."/default/js/smooth-scrollbar.js",
-        $sysconf['admin_template']['dir']."/default/js/overscroll.js"
     ];
 
     if (count($arrayAdditionalJS) > 0)
@@ -139,8 +136,8 @@ function defaultCss($arrayAdditionalCSS = [])
     global $sysconf;
 
     $cssMap = [
-        SWB."css/bootstrap.min.css?ver=".date('this'),
-        SWB."css/core.css?ver=".date('this'),
+        themeLink("slimscss/bootstrap.min.css?ver=".date('this')),
+        themeLink("slimscss/core.css?ver=".date('this')),
         JWB."colorbox/colorbox.css?ver=".date('this'),
         JWB."chosen/chosen.css?ver=".date('this'),
         JWB."jquery.imgareaselect/css/imgareaselect-default.css",
