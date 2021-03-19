@@ -10,7 +10,7 @@
 (!defined('INDEX_AUTH')) ?? die('No direct include!');
 
 // set Version
-define('BIT_VERSION', '1.4.0');
+define('BIT_VERSION', '1.4.1');
 
 // set license
 define('BIT_LICENSE', 'GPLv3');

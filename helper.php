@@ -21,7 +21,13 @@ function themeLink($path = '')
         $versioning = '?ver='.date('this');
     }
 
-    return AWB . 'admin_template/bitlike/' .$path . $versioning;
+    $dir = 'bitlike/';
+    if ( isExists( SB.'admin/admin_template/bitlike-master/' ) && !isExists( SB.'admin/admin_template/bitlike/' ))
+    {
+        $dir = 'bitlike-master/';
+    }
+
+    return AWB . 'admin_template/' . $dir .$path . $versioning;
 }
 
 // Generate base Link
@@ -104,7 +110,7 @@ function defaultJS($arrayAdditionalJS = [])
         JWB."scanner.js",
         SWB."js/bootstrap.min.js",
         SWB."js/popper.min.js",
-        AWB."admin_template/bitlike/assets/js/vanilla-picker.min.js",
+        themeLink("assets/js/vanilla-picker.min.js"),
         $sysconf['admin_template']['dir']."/default/js/smooth-scrollbar.js",
         $sysconf['admin_template']['dir']."/default/js/overscroll.js"
     ];
@@ -138,7 +144,7 @@ function defaultCss($arrayAdditionalCSS = [])
         JWB."colorbox/colorbox.css?ver=".date('this'),
         JWB."chosen/chosen.css?ver=".date('this'),
         JWB."jquery.imgareaselect/css/imgareaselect-default.css",
-        AWB."admin_template/bitlike/assets/css/tui-chart.min.css",
+        themeLink("assets/css/tui-chart.min.css")
     ];
 
     if (count($arrayAdditionalCSS) > 0)

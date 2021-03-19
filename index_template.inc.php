@@ -181,7 +181,7 @@ Email : <?= BIT_AUTHOR_EMAIL ?>
         <iframe name="blindSubmit" class="hidden"></iframe>
         <!-- Application Javascript -->
         <script type="text/javascript" app-bitlike="true" src="<?= themeLink('assets/js/app.js'); ?>" alwaysShowTracks="true"></script>
-        <script type="text/javascript" src="<?= AWB."admin_template/bitlike/assets/js/tui-chart-all.min.js" ?>"></script>
+        <script type="text/javascript" src="<?= themeLink("assets/js/tui-chart-all.min.js") ?>"></script>
         <!-- Load ui -->
         <script>
             let awb = '<?=AWB?>';
