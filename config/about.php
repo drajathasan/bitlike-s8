@@ -25,7 +25,7 @@ require __DIR__.'/../BitLike.php';
 <div class="menuBox">
   <div class="menuBoxInner systemIcon">
     <div class="per_title">
-      <h2>Tetang BitLike</h2>
+      <h2>Tetang BitLike-S8</h2>
     </div>
   </div>
 </div>
@@ -76,7 +76,7 @@ require __DIR__.'/../BitLike.php';
             </li>
             <li><h1 class="text-lg font-bold mt-2">Deskripsi</h1></li>
             <li>
-                <p class="leading-8 text-justify pr-5">BitLike merupakan template admin untuk SLiMS >= 9.3.1 yang terinspirasi dari template dashboard layanan Hosting Git yaitu <b>BitBucket</b>. Apa yang anda lihat bukanlah hasil <b class="italic"><i>copy-paste</i></b> template dengan mesin kloning seperti httrack melain kan rakitan dan dibuat dengan bantuan library CSS dari bootstrap dan tailwind + css bawaan SLiMS 9 dll, jadi ini tidak murni saya buat dari nol melainkan rakitan. Saya berharap anda dapat menikmati template ini dengan Bebas (Dikustom sesuai keinginan) dengan <a href="javascript:void(0)" class="notAJAX" title="Klik untuk info lebih lanjut" onclick="alert('Jangan hapus nama saya ketika anda mengcustom template ini atau mengkomersilkan nya (Kebutuhan Jasa) : (.')"><b>etika yang berlaku :).</b></a></p>
+                <p class="leading-8 text-justify pr-5">BitLike merupakan template admin untuk SLiMS >= 9.3.1, tetapi pada saat ini sudah mendukung SLiMS 8. yang terinspirasi dari template dashboard layanan Hosting Git yaitu <b>BitBucket</b>. Apa yang anda lihat bukanlah hasil <b class="italic"><i>copy-paste</i></b> template dengan mesin kloning seperti httrack melain kan rakitan dan dibuat dengan bantuan library CSS dari bootstrap dan tailwind + css bawaan SLiMS 9 dll, jadi ini tidak murni saya buat dari nol melainkan rakitan. Saya berharap anda dapat menikmati template ini dengan Bebas (Dikustom sesuai keinginan) dengan <a href="javascript:void(0)" class="notAJAX" title="Klik untuk info lebih lanjut" onclick="alert('Jangan hapus nama saya ketika anda mengcustom template ini atau mengkomersilkan nya (Kebutuhan Jasa) : (.')"><b>etika yang berlaku :).</b></a></p>
             </li>
         </ul>
     </div>

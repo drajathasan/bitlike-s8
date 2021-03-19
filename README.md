@@ -1,6 +1,6 @@
 ## Deskripsi
 
-BitLike merupakan template admin untuk SLiMS >= 9.3.1 yang terinspirasi dari template dashboard layanan Hosting Git yaitu BitBucket. Apa yang anda lihat bukanlah hasil copy-paste template dengan mesin kloning seperti httrack melain kan rakitan dan dibuat dengan bantuan library CSS dari bootstrap dan tailwind + css bawaan SLiMS 9 dll, jadi ini tidak murni saya buat dari nol melainkan rakitan. Saya berharap anda dapat menikmati template ini dengan Bebas (Dikustom sesuai keinginan) dengan etika yang berlaku :).
+BitLike merupakan template admin untuk SLiMS >= 9.3.1, tetapi pada repo saat ini sudah mendukung SLiMS 8. Terinspirasi dari template dashboard layanan Hosting Git yaitu BitBucket. Apa yang anda lihat bukanlah hasil copy-paste template dengan mesin kloning seperti httrack melain kan rakitan dan dibuat dengan bantuan library CSS dari bootstrap dan tailwind + css bawaan SLiMS 9 dll, jadi ini tidak murni saya buat dari nol melainkan rakitan. Saya berharap anda dapat menikmati template ini dengan Bebas (Dikustom sesuai keinginan) dengan etika yang berlaku :).
 
 ## Instalasi
 

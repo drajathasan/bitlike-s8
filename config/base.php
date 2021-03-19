@@ -85,7 +85,7 @@ $configWrite = is_writable(__DIR__);
 <div class="menuBox">
   <div class="menuBoxInner systemIcon">
     <div class="per_title">
-      <h2>BitLike Configuration</h2>
+      <h2>BitLike-S8 Configuration</h2>
     </div>
     <div class="infoBox">
       Ubah pengaturan.
