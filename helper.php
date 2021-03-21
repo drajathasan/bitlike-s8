@@ -16,7 +16,7 @@ function themeLink($path = '')
 
     $versioning = '?ver=' . BIT_VERSION;
 
-    if (ENVIRONMENT === 'development')
+    if (ini_get('display_errors') === true)
     {
         $versioning = '?ver='.date('this');
     }
