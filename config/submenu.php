@@ -14,12 +14,12 @@
      ],
      [
          'Pengaturan', 
-         AWB.'admin_template/bitlike/config/base.php', 
+         themeLink('config/base.php'),
          'Pengaturan tampilan dll untuk template bitlike'
      ],
      [
         'Tentang BitLike',
-        AWB.'admin_template/bitlike/config/about.php',
+        themeLink('config/about.php'),
         'Ikhwal mengenai template, seperti pengembang, versi template dll'
      ]
 ];

@@ -21,8 +21,8 @@ function themeLink($path = '')
         $versioning = '?ver='.date('this');
     }
 
-    $dir = 'bitlike/';
-    if ( isExists( SB.'admin/admin_template/bitlike-master/' ) && !isExists( SB.'admin/admin_template/bitlike/' ))
+    $dir = 'bitlike-s8/';
+    if ( isExists( SB.'admin/admin_template/bitlike-master/' ) && !isExists( SB.'admin/admin_template/bitlike-s8/' ))
     {
         $dir = 'bitlike-master/';
     }

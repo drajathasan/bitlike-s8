@@ -73,7 +73,7 @@ if (isset($_GET['defaultSubmenu']))
 // set BitLike submenu
 if (isset($_GET['bitlikeMenu']))
 {
-    include SB.'admin/admin_template/bitlike/config/submenu.php';
+    include SB.'admin/admin_template/bitlike-s8/config/submenu.php';
 
     header('Content-type: application/json');
     echo json_encode(array_values($menu));

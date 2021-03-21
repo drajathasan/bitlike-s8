@@ -31,7 +31,7 @@ function openMenu(type = '')
     // Set timeout
     setTimeout(async () => {
         // Check prop
-        if (type !== '' && localStorage.getItem(type) === null)
+        if (type !== '' && localStorage.getItem(type+'-s8') === null)
         {
             // Make request
             await fetch(`index.php?generateMenu=${type}`)
@@ -78,7 +78,7 @@ function hideMenu()
 const searchMenu = (event, obj) => {
     if (obj.value !== '')
     {
-        let result = JSON.parse(localStorage.getItem('Search-Menu'));
+        let result = JSON.parse(localStorage.getItem('Search-Menu-s8'));
         let html = '';
 
         result.forEach((item)=> {
@@ -111,7 +111,7 @@ const searchMenu = (event, obj) => {
 
 function openModule(moduleName, href)
 {
-    localStorage.setItem('tempSubmenu', href);
+    localStorage.setItem('tempSubmenu-s8', href);
     window.location.href = `?mod=${moduleName}`;
 }
 
@@ -125,7 +125,7 @@ function openDefaultSubmenu()
             .then(response => response.text())
             .then(result => {
                 // Make a cache
-                localStorage.setItem('defaultSubmenu', result);
+                localStorage.setItem('defaultSubmenu-s8', result);
                 // Parse JSON
                 let defaultSubmenu = JSON.parse(result);
                 // store html
@@ -180,13 +180,13 @@ function openBitLikeSubmenu()
 {
     setTimeout(() => {
         // set submenu
-        if (localStorage.getItem('bitlikeMenu') === null)
+        if (localStorage.getItem('bitlikeMenu-s8') === null)
         {
             fetch('index.php?bitlikeMenu=yes')
             .then(response => response.text())
             .then(result => {
                 // store cache
-                localStorage.setItem('bitlikeMenu', result)
+                localStorage.setItem('bitlikeMenu-s8', result)
                 // parsing
                 let defaultSubmenu = JSON.parse(result);
                 // set to view
@@ -197,7 +197,7 @@ function openBitLikeSubmenu()
         else
         {
             // parsing
-            let defaultSubmenu = JSON.parse(localStorage.getItem('bitlikeMenu'));
+            let defaultSubmenu = JSON.parse(localStorage.getItem('bitlikeMenu-s8'));
             // set to view
             setHtml('.submenu', renderBitLikeSubmenu(defaultSubmenu));
             specialSimbioClick(defaultSubmenu[1][1]);
@@ -240,12 +240,12 @@ function renderBitLikeSubmenu(defaultSubmenu)
 // parse and caching
 const parseModuleList = (type = '', inputResult = '') =>
 {
-    if (localStorage.getItem(type) === null)
+    if (localStorage.getItem(type+'-s8') === null)
     {
-        localStorage.setItem(type, inputResult);
+        localStorage.setItem(type+'-s8', inputResult);
     }
 
-    let result = JSON.parse(localStorage.getItem(type));
+    let result = JSON.parse(localStorage.getItem(type+'-s8'));
     let menu = '';
 
     if (type === 'General-Menu') 
