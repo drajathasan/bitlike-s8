@@ -113,10 +113,6 @@ function generateSubMenu($module, $objModule, $withHtml = true)
     else 
     {
         include 'default/submenu.php';
-        foreach ($objModule->get_shortcuts_menu($dbs) as $key => $value) {
-            $link = explode('|', $value);
-            $menu[$link[0]] = array(__($link[0]), MWB.$link[1]);
-        }
     }
 
     return ($withHtml) ? submenuHtml($menu) : $menu;
