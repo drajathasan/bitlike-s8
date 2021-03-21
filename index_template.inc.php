@@ -193,16 +193,16 @@ Email : <?= BIT_AUTHOR_EMAIL ?>
                 {
                 ?>
                     <script type="text/javascript">
-                        if (localStorage.getItem('tempSubmenu') === null)
+                        if (localStorage.getItem('tempSubmenu-s8') === null)
                         {
                             $("#mainContent").simbioAJAX("<?= MWB.basename($_GET['mod']) ?>/index.php");
                         }
                         else
                         {
                             // set temp submenu
-                            $("#mainContent").simbioAJAX(localStorage.getItem('tempSubmenu'));
+                            $("#mainContent").simbioAJAX(localStorage.getItem('tempSubmenu-s8'));
                             // remove temp submenu
-                            localStorage.removeItem('tempSubmenu');
+                            localStorage.removeItem('tempSubmenu-s8');
                         }
                     </script>
                 <?php
